@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/joao.piraja@sydle.net/Disco X/UFMG/2024.2/Automação em tempo real/Exercícios/Exercício 2/tictactoe/src/tic_tac_toe.cpp" "CMakeFiles/tic_tac_toe.dir/src/tic_tac_toe.cpp.o" "gcc" "CMakeFiles/tic_tac_toe.dir/src/tic_tac_toe.cpp.o.d"
+  "/home/joao.piraja@sydle.net/Disco X/UFMG/2024.2/Automação em tempo real/Exercícios/Exercício 2/tictactoe/C++/src/tic_tac_toe.cpp" "CMakeFiles/tic_tac_toe.dir/src/tic_tac_toe.cpp.o" "gcc" "CMakeFiles/tic_tac_toe.dir/src/tic_tac_toe.cpp.o.d"
   )
 
 # Targets to which this target links.

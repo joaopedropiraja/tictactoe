@@ -1,4 +1,4 @@
-# Install script for directory: /home/joao.piraja@sydle.net/Disco X/UFMG/2024.2/Automação em tempo real/Exercícios/Exercício 2/tictactoe
+# Install script for directory: /home/joao.piraja@sydle.net/Disco X/UFMG/2024.2/Automação em tempo real/Exercícios/Exercício 2/tictactoe/C++
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/joao.piraja@sydle.net/Disco X/UFMG/2024.2/Automação em tempo real/Exercícios/Exercício 2/tictactoe/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/joao.piraja@sydle.net/Disco X/UFMG/2024.2/Automação em tempo real/Exercícios/Exercício 2/tictactoe/C++/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
