@@ -6,51 +6,6 @@
 #include <chrono>
 #include<cstdlib>
 
-
-class Semaphore {
-private:
-  std::mutex m;
-  std::condition_variable cv;
-  int count;
-
-public:
-  Semaphore(int c): count(c) {}
-  void wait() {
-    std::unique_lock<std::mutex> lock(this->m);
-    while(this->count <= 0) {
-      this->cv.wait(lock);
-    }
-    this->count--;
-  };
-  void signal() {
-    std::unique_lock<std::mutex> lock(this->m);
-    this->count++;
-    this->cv.notify_one();
-  };
-};
-
-class Barrier {
-private:
-  std::mutex m;
-  std::condition_variable cv;
-  int desiredCount;
-  int currCount;
-
-public:
-  Barrier(int c): desiredCount(c), currCount(0) {}
-  
-  void wait() {
-    std::unique_lock<std::mutex> lock(this->m);
-    this->currCount++;
-    while (this->currCount < this->desiredCount) {
-      this->cv.wait(lock);
-    }
-
-    this->cv.notify_all();
-  };
-};
-
-
 enum Strategy {
   SEQUENTIAL = 1,
   RANDOM,
