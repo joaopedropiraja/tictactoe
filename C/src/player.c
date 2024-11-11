@@ -44,13 +44,13 @@ void *pl_play(void *player) {
 static int getRandomInt(int min, int max) {
 	srand((unsigned) time(NULL));
 
-  return min + (rand() % max);
+  return min + (rand() % (max + min));
 }
 
 static void playSequential(Player *player) {
   do {
-    player->col = (player->col + 1) % 3;
-    if (player->col == 0) player->row = (player->row + 1) % 3;
+    player->col = (player->col + 1) % ttt_getBoardSize(player->game);
+    if (player->col == 0) player->row = (player->row + 1) % ttt_getBoardSize(player->game);
   } while(!ttt_makeMove(player->game, player->symbol, player->row, player->col));
 };
 static void playRandom(Player *player) {

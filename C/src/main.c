@@ -8,7 +8,7 @@
 #include "msgassert.h"
 
 int main(int argc, char *argv[]) {
-  size_t boardSize = 3;
+  size_t boardSize = 2;
   TicTacToe *game = ttt_create(boardSize);
   Player *player1 = pl_create(game, X, RANDOM);
   Player *player2 = pl_create(game, O, RANDOM);

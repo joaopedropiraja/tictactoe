@@ -7,6 +7,7 @@
 #include "msgassert.h"
 
 #define DELAY_PRINT 1
+#define PLAYER_SPACE 3
 
 struct ticTacToe_s {
   pthread_mutex_t boardMutex;
@@ -152,8 +153,14 @@ void ttt_displayBoard(TicTacToe *game) {
       }
     }
 
+
     if (i != (game->boardSize - 1)) {
-      printf("\n===========\n");
+      int numberOfEquals = PLAYER_SPACE * game->boardSize + (game->boardSize - 1);
+      printf("\n");
+      for (int k = 0; k < numberOfEquals; k++) {
+        printf("=");
+      }
+      printf("\n");
     }
   }
 

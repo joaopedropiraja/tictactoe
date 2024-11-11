@@ -14,7 +14,7 @@ enum Strategy {
 int getRandomInt(int min, int max) {
 	srand((unsigned) time(NULL));
 
-  return min + (rand() % max);
+  return (rand() % (max - min + 1)) + min;
 }
 
 // Classe TicTacToe
@@ -181,8 +181,8 @@ private:
 int main() {
   // Inicializar o jogo e os jogadores
   TicTacToe game;
-  Player player1(game, 'X', Strategy::SEQUENTIAL);
-  Player player2(game, 'O', Strategy::SEQUENTIAL);
+  Player player1(game, 'X', Strategy::RANDOM);
+  Player player2(game, 'O', Strategy::RANDOM);
   
   // Criar as threads para os jogadores
   std::thread t1([&]() {
